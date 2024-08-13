@@ -2,22 +2,19 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class Customer extends BaseModel
+class Language extends BaseModel
 {
     use HasFactory, HasUuids;
-protected $table = 'customers';
+
+    protected $table = 'languages';
     protected $primaryKey = 'id';
     public $incrementing = false;
     protected $keyType = 'string';
-
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
-
-    protected $attributes = [
-        'is_verified' => false,
-    ];
 }
